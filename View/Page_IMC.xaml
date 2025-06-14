@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm= "clr-namespace:Maui_1.ViewModel"
+             x:Class="Maui_1.View.Page_IMC"
+             x:DataType="{x:Type vm:IMC_VM}"
+             Title="Calcular a tava de I.M.C">
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="Margin" Value="0,12"/>
+        </Style>
+    </ContentPage.Resources>
+    <VerticalStackLayout Padding="22">
+        <Image Source="imc.jpg" MaximumWidthRequest="300"/>
+        <Border
+            Stroke="Black" StrokeThickness="2"
+            StrokeShape="RoundRectangle 30"
+            Padding="12">
+            <StackLayout>
+                <Entry Placeholder="Peso" Text="{Binding Peso, Mode=TwoWay}"
+                           Keyboard="Numeric"
+                           />
+                <Entry Placeholder="Altura" Text="{Binding Altura, Mode=TwoWay}"
+                            Keyboard="Numeric"
+                            />
+                <Button Command="{Binding CalcularIMCCommand}"
+                        CommandParameter="{Binding .}"
+                    Text="Calcular" Margin="0, 12" Background="black"/>
+                <Border Stroke="Black" Padding="12" 
+                        Margin="0,12,0,33"
+                        StrokeThickness="1" StrokeShape="RoundRectangle 10">
+                    <Label Text="{Binding Imc}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Border>
+            </StackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

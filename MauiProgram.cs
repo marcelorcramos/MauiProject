@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-
+using Maui_1.ViewModel;
 namespace Maui_1
 {
     public static class MauiProgram
@@ -18,7 +18,9 @@ namespace Maui_1
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+            builder.Services.AddSingleton<IMC_VM>();
+            builder.Services.AddSingleton<DataContext>();
+            builder.Services.AddSingleton<PessoaVM>();
             return builder.Build();
         }
     }

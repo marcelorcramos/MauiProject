@@ -4,11 +4,26 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Maui_1"
+    xmlns:v="clr-namespace:Maui_1.View"
+    Shell.FlyoutBehavior="Flyout"
     Title="Maui_1">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem Title="menu" FlyoutDisplayOptions="AsMultipleItems">
 
+        <ShellContent Title="Pessoas" 
+              Route="Pessoas" 
+              ContentTemplate="{DataTemplate v:Page_Pessoas}"/>
+
+        <ShellContent Title="IMC" 
+                      Route="IMC" 
+                      ContentTemplate="{DataTemplate v:Page_IMC}"/>
+            
+            
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+    </FlyoutItem>
+
+  
 </Shell>
