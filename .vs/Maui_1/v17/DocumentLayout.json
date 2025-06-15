@@ -11,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{A5C79860-9B9D-43D8-9F5A-5FE75DA7EA6A}|Maui_1.csproj|solutionrelative:view\\page_pessoas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5C79860-9B9D-43D8-9F5A-5FE75DA7EA6A}|Maui_1.csproj|c:\\users\\marcelo ramos\\desktop\\istec\\poo\\maui_1\\view\\page_pessoas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5C79860-9B9D-43D8-9F5A-5FE75DA7EA6A}|Maui_1.csproj|solutionrelative:view\\page_pessoas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A5C79860-9B9D-43D8-9F5A-5FE75DA7EA6A}|Maui_1.csproj|c:\\users\\marcelo ramos\\desktop\\istec\\poo\\maui_1\\model\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5C79860-9B9D-43D8-9F5A-5FE75DA7EA6A}|Maui_1.csproj|solutionrelative:model\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5C79860-9B9D-43D8-9F5A-5FE75DA7EA6A}|Maui_1.csproj|c:\\users\\marcelo ramos\\desktop\\istec\\poo\\maui_1\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5C79860-9B9D-43D8-9F5A-5FE75DA7EA6A}|Maui_1.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5C79860-9B9D-43D8-9F5A-5FE75DA7EA6A}|Maui_1.csproj|c:\\users\\marcelo ramos\\desktop\\istec\\poo\\maui_1\\.gitattributes||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A5C79860-9B9D-43D8-9F5A-5FE75DA7EA6A}|Maui_1.csproj|solutionrelative:.gitattributes||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,33 +30,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": ".gitattributes",
+              "DocumentMoniker": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\.gitattributes",
+              "RelativeDocumentMoniker": ".gitattributes",
+              "ToolTip": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\.gitattributes",
+              "RelativeToolTip": ".gitattributes",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAALAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-06-15T19:59:48.332Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T13:27:29.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\Model\\DataContext.cs",
               "RelativeDocumentMoniker": "Model\\DataContext.cs",
               "ToolTip": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\Model\\DataContext.cs",
               "RelativeToolTip": "Model\\DataContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAuwD0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T19:56:40.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Page_Pessoas.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\View\\Page_Pessoas.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Page_Pessoas.xaml.cs",
-              "ToolTip": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\View\\Page_Pessoas.xaml.cs",
-              "RelativeToolTip": "View\\Page_Pessoas.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T19:27:03.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-14T19:56:40.92Z"
             },
             {
               "$type": "Document",
@@ -62,10 +76,9 @@
               "RelativeDocumentMoniker": "View\\Page_Pessoas.xaml",
               "ToolTip": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\View\\Page_Pessoas.xaml",
               "RelativeToolTip": "View\\Page_Pessoas.xaml",
-              "ViewState": "AgIAACkAAAAAAAAAAAAkwEgAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAD4v1QAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-14T19:23:47.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-14T19:23:47.881Z"
             },
             {
               "$type": "Document",
@@ -75,7 +88,7 @@
               "RelativeDocumentMoniker": "ViewModel\\PessoaVM.cs",
               "ToolTip": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\ViewModel\\PessoaVM.cs",
               "RelativeToolTip": "ViewModel\\PessoaVM.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAADwv1UAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAADwvzUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T16:28:39.932Z",
               "EditorCaption": ""

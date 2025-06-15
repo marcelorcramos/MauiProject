@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "dGL6cz1DLuE=",
+  "dgSpecHash": "bj9zJ/GOgFc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Marcelo Ramos\\Desktop\\ISTEC\\POO\\Maui_1\\Maui_1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\communitytoolkit.maui\\8.0.0\\communitytoolkit.maui.8.0.0.nupkg.sha512",
+    "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\communitytoolkit.maui.core\\8.0.0\\communitytoolkit.maui.core.8.0.0.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\googlegson\\2.11.0.5\\googlegson.2.11.0.5.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.0\\microsoft.extensions.configuration.9.0.0.nupkg.sha512",
@@ -19,6 +21,7 @@
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\microsoft.io.recyclablememorystream\\3.0.1\\microsoft.io.recyclablememorystream.3.0.1.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\microsoft.maui.controls\\9.0.51\\microsoft.maui.controls.9.0.51.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\microsoft.maui.controls.build.tasks\\9.0.51\\microsoft.maui.controls.build.tasks.9.0.51.nupkg.sha512",
+    "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\microsoft.maui.controls.compatibility\\8.0.14\\microsoft.maui.controls.compatibility.8.0.14.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\microsoft.maui.controls.core\\9.0.51\\microsoft.maui.controls.core.9.0.51.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\microsoft.maui.controls.xaml\\9.0.51\\microsoft.maui.controls.xaml.9.0.51.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\microsoft.maui.core\\9.0.51\\microsoft.maui.core.9.0.51.nupkg.sha512",
@@ -41,6 +44,7 @@
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\system.runtime.interopservices.nfloat.internal\\6.0.1\\system.runtime.interopservices.nfloat.internal.6.0.1.nupkg.sha512",
+    "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\system.speech\\8.0.0\\system.speech.8.0.0.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\xamarin.android.glide\\4.16.0.11\\xamarin.android.glide.4.16.0.11.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\xamarin.android.glide.annotations\\4.16.0.11\\xamarin.android.glide.annotations.4.16.0.11.nupkg.sha512",
     "C:\\Users\\Marcelo Ramos\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.16.0.11\\xamarin.android.glide.disklrucache.4.16.0.11.nupkg.sha512",

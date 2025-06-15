@@ -6,64 +6,182 @@
              x:DataType="{x:Type vm:PessoaVM}"
              x:Class="Maui_1.View.Page_Pessoas"
              Padding="12"
-             Title="Page_Pessoas">
+             Title="Agenda de Contatos"
+             BackgroundColor="#F8F9FA">
+
     <ContentPage.Resources>
+        <Color x:Key="PrimaryColor">#512BD4</Color>
+        <Color x:Key="SecondaryColor">#DFD8F7</Color>
+        <Color x:Key="AccentColor">#2B0B98</Color>
+        <Color x:Key="TextColor">#333333</Color>
+        <Color x:Key="LightBackground">#FFFFFF</Color>
+        <Color x:Key="BorderColor">#E0E0E0</Color>
+
         <Style TargetType="Border">
-            <Setter Property="Stroke" Value="Black"/>
-            <Setter Property="Padding" Value="12"/>
+            <Setter Property="Stroke" Value="{StaticResource BorderColor}"/>
+            <Setter Property="StrokeThickness" Value="1"/>
+            <Setter Property="Padding" Value="16"/>
             <Setter Property="StrokeShape" Value="RoundRectangle 12"/>
+            <Setter Property="Background" Value="{StaticResource LightBackground}"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+            <Setter Property="PlaceholderColor" Value="#999999"/>
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="HeightRequest" Value="40"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="14,8"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HeightRequest" Value="45"/>
+        </Style>
+
+        <Style x:Key="HeaderStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
         </Style>
     </ContentPage.Resources>
-    <Grid RowDefinitions="auto,auto,*">
-        <Border>
-            <VerticalStackLayout>
-                <Label Text="Pessoa Ativa"/>
-                <Entry IsReadOnly="True" Text="{Binding Pessoacur.Id}" Placeholder="Id"/>
-                <Entry Text="{Binding Pessoacur.Nome, Mode=TwoWay}" Placeholder="Introduza Nome"/>
-                <Entry Keyboard="Telephone" Text="{Binding Pessoacur.Telefone, Mode=TwoWay }" Placeholder="Introduza Telefone"/>
-                <Button Command="{Binding SalvarPessoaCommand}"  Text="Guardar" BackgroundColor="Black"/>
+
+    <Grid RowDefinitions="auto,auto,auto,*" RowSpacing="10">
+        <!-- Seção de formulário -->
+        <Border Grid.Row="0">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Pessoa Ativa" 
+                       Style="{StaticResource HeaderStyle}"/>
+
+                <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto" RowSpacing="10" ColumnSpacing="10">
+                    <Label Text="ID:" Grid.Row="0" Grid.Column="0" VerticalOptions="Center"/>
+                    <Entry Grid.Row="0" Grid.Column="1" IsReadOnly="True" Text="{Binding Pessoacur.Id}"/>
+
+                    <Label Text="Nome:" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"/>
+                    <Entry Grid.Row="1" Grid.Column="1" Text="{Binding Pessoacur.Nome, Mode=TwoWay}" 
+                           Placeholder="Nome completo"/>
+
+                    <Label Text="Telefone:" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"/>
+                    <Entry Grid.Row="2" Grid.Column="1" Keyboard="Telephone" 
+                           Text="{Binding Pessoacur.Telefone, Mode=TwoWay}" 
+                           Placeholder="(XX) XXXXX-XXXX"/>
+                </Grid>
+
+                <Button Command="{Binding SalvarPessoaCommand}" 
+                        Text="Guardar" 
+                        Margin="0,15,0,0"/>
             </VerticalStackLayout>
         </Border>
-        <Label HorizontalTextAlignment="Center" Margin="12" Text="Lista de Pessoas" Grid.Row="1"/>
-        <CollectionView Grid.Row="2" ItemsSource="{Binding Pessoas}">
+
+        <!-- Título da lista e controles de ordenação -->
+        <HorizontalStackLayout Grid.Row="1" HorizontalOptions="Center" Spacing="15">
+            <Label Text="Lista de Contatos" 
+                   Style="{StaticResource HeaderStyle}"/>
+
+            <Button Command="{Binding ShowSortOptionsCommand}"
+                    Text="{Binding SortStatusMessage}"
+                    BackgroundColor="{StaticResource AccentColor}"
+                    CornerRadius="20"
+                    Padding="15,5"/>
+        </HorizontalStackLayout>
+
+        <!-- Lista de contatos -->
+        <CollectionView Grid.Row="3" ItemsSource="{Binding Pessoas}">
             <CollectionView.EmptyView>
-                <Border>
-                    <VerticalStackLayout>
-                        <Label Text="Lista Vazia"/>
-                    </VerticalStackLayout>
-                </Border>
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                    <Image Source="empty_contacts.png" 
+                           HeightRequest="100" 
+                           Aspect="AspectFit"/>
+                    <Label Text="Nenhum contato encontrado" 
+                           FontSize="16"
+                           HorizontalOptions="Center"/>
+                    <Button Text="Adicionar Primeiro Contato" 
+                            Command="{Binding SetPessoasCurCommand}"
+                            HorizontalOptions="Center"/>
+                </VerticalStackLayout>
             </CollectionView.EmptyView>
+
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" ItemSpacing="3"/>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="8"/>
             </CollectionView.ItemsLayout>
+
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type m:Pessoa}">
-                    <Border>
-                    <SwipeView MinimumHeightRequest="40">
-                        <SwipeView.RightItems>
-                            <SwipeItems>
-                                <SwipeItem
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PessoaVM}},Path=SetPessoasCurCommand}"
-                                    CommandParameter="{Binding .}"
-                                    Text="✎" BackgroundColor="Green"/>
-                                <SwipeItem 
-                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PessoaVM}},Path=DeletePessoaCommand}"
-                                    CommandParameter="{Binding .}"
-                                    Text="🗑" BackgroundColor="Red"/>
-                                <SwipeItem Text="☏" BackgroundColor="Yellow"/>
-                            </SwipeItems>
-                        </SwipeView.RightItems>
-                        <VerticalStackLayout>
-                            <Label >
-                                <Label.Text>
-                                    <MultiBinding StringFormat="reg: {0} {1} tlf:{2}">
-                                        <Binding Path="Id"/>
-                                        <Binding Path="Nome"/>
-                                        <Binding Path="Telefone"/>
-                                    </MultiBinding>
-                                </Label.Text>
-                            </Label>
-                            </VerticalStackLayout>
+                    <Border Margin="5">
+                        <SwipeView MinimumHeightRequest="60" BackgroundColor="{StaticResource SecondaryColor}">
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItem BackgroundColor="{StaticResource PrimaryColor}"
+                                              Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PessoaVM}}, Path=SetPessoasCurCommand}"
+                                              CommandParameter="{Binding .}">
+                                        <SwipeItem.IconImageSource>
+                                            <FontImageSource Glyph="✎" 
+                                                            FontFamily="MaterialDesignIcons"
+                                                            Color="White"/>
+                                        </SwipeItem.IconImageSource>
+                                    </SwipeItem>
+                                    <SwipeItem BackgroundColor="#FF3B30"
+                                              Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PessoaVM}}, Path=DeletePessoaCommand}"
+                                              CommandParameter="{Binding .}">
+                                        <SwipeItem.IconImageSource>
+                                            <FontImageSource Glyph="🗑" 
+                                                            FontFamily="MaterialDesignIcons"
+                                                            Color="White"/>
+                                        </SwipeItem.IconImageSource>
+                                    </SwipeItem>
+                                    <SwipeItem BackgroundColor="#34C759"
+                                              Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PessoaVM}}, Path=LigarCommand}"
+                                              CommandParameter="{Binding .}">
+                                        <SwipeItem.IconImageSource>
+                                            <FontImageSource Glyph="☏" 
+                                                            FontFamily="MaterialDesignIcons"
+                                                            Color="White"/>
+                                        </SwipeItem.IconImageSource>
+                                    </SwipeItem>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+
+                            <Grid ColumnDefinitions="Auto,*,Auto" Padding="10">
+                                <Frame CornerRadius="20" 
+                                       HeightRequest="40" 
+                                       WidthRequest="40" 
+                                       HorizontalOptions="Center" 
+                                       VerticalOptions="Center"
+                                       BackgroundColor="{StaticResource PrimaryColor}">
+                                    <Label Text="{Binding Nome, StringFormat='{0}{1}'}" 
+                                           TextColor="White"
+                                           FontSize="16"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"/>
+                                </Frame>
+
+                                <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                    <Label Text="{Binding Nome}" 
+                                           FontSize="16"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{Binding Telefone}" 
+                                           TextColor="#666666"
+                                           FontSize="14"/>
+                                </VerticalStackLayout>
+
+                                <ImageButton Grid.Column="2" 
+                                             Source="phone_icon.png" 
+                                             BackgroundColor="Transparent"
+                                             Command="{Binding Source={RelativeSource AncestorType={x:Type vm:PessoaVM}}, Path=LigarCommand}"
+                                             CommandParameter="{Binding .}"
+                                             HeightRequest="30"
+                                             WidthRequest="30"/>
+                            </Grid>
                         </SwipeView>
                     </Border>
                 </DataTemplate>
